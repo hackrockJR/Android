@@ -1,0 +1,104 @@
+///Mostrar mensaje emergente por poco tiempo al iniciar el APP///
+
+
+Toast.makeText(this,"Bienvenidos", Toast.LENGTH_LONG).show();
+
+
+///Modificar nombre de la aplicacion y mensaje Hola mundo///
+
+//Ubicacion en 
+
+<resources>
+    <string name="app_name">ROMEROAPP</string>
+    <string name="hackrock">Hackrock</string>
+</resources>
+
+///Realizar debbugin para encontrar error en el codigo///
+
+Uso de breakpoint ( Punto rojo en el codigo) para detener el debug en ese punto.
+
+////Activity - Context/////
+
+Ejemplos> https://github.com/AL-Android-Course
+
+
+Activity> ventana de la aplicacion. 
+Conext : Interactua con el Activity , hace llamados a Item y puede llamar a otro activity 
+Funciona para renderizar.
+
+Ciclo de vida: 
+
+- ontstart
+- onResume
+- onPause
+- onStop
+- onRestart
+- onDestroy
+
+////Libreria/////
+
+supertoast:
+
+Dependencia agregar: compile 'com.github.johnpersano:supertoasts:2.0'
+
+lueo debemos dar sincronizar en la ubiacion Gradle/build.gradle(module: app)
+
+y Sincronizar en MainActivity.java
+
+
+Ejemplo de libreria>
+
+implementation 'com.github.johnpersano:supertoasts:2.0' //Descarga de github la libreria
+
+Importarmos en MainActivity.java {
+
+import com.github.johnpersano.supertoasts.library.Style;
+import com.github.johnpersano.supertoasts.library.SuperActivityToast;
+import com.github.johnpersano.supertoasts.library.utils.PaletteUtils;
+
+y en la public class de MainActivity.java
+
+SuperActivityToast.create(this, new Style(), Style.TYPE_BUTTON)
+                .setButtonText("UNDO")
+                .setOnButtonClickListener("good_tag_name", null,null)
+                .setProgressBarColor(Color.WHITE)
+                .setText("Email deleted")
+                .setDuration(Style.DURATION_LONG)
+                .setFrame(Style.FRAME_LOLLIPOP)
+                .setColor(PaletteUtils.getSolidColor(PaletteUtils.MATERIAL_PURPLE))
+                .setAnimations(Style.ANIMATIONS_POP).show();
+}
+
+//Debug del codigo 
+
+//Corremos el ejemplo
+
+///////////////////////////////////////////////////////////
+
+Estilo y colores>
+Ruta> res/values/<colors.xml o stykes.xml>
+Se define el nombre de los colores> 
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+
+    <!--<color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>-->
+</resources>
+
+///////////////////////////////////
+
+Vista 
+
+setContentView(R.layout.activity_main); //Buscar en activity_main
