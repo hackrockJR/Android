@@ -1,0 +1,40 @@
+Android
+
+>>>
+
+Configuracion basica>
+
+JAVA> <midominio.com.miaplicacion>
+
+android.manifest.xml
+
+<activity
+
+Ventana de la apliacion. 
+
+>
+
+
+Editamos en RES:
+
+Icono > mipmap/icon.icon
+Nombre de la aplicacion> string/aplicacion_nombre
+
+
+
+> MAIN 
+
+el main esta definido por el intent_filter.
+
+
+> Gradle 
+
+Modulo de la aplicacion 
+
+
+Atajos de teclado> 
+
+ctrl I : Implementar metodos. 
+
+
+mas::: https://developer.android.com/studio/intro/keyboard-shortcuts?hl=es-419
